@@ -1,0 +1,20 @@
+
+$background-dark: #5133a5;
+$background-lite: #d1c5e8;
+$text-color: floralwhite;
+
+.modal{
+    .modal-header{
+		
+        background-color:$background-dark;
+        color:$text-color;
+        
+        button{
+            color:$text-color;
+        }
+    }
+    
+    .modal-body{
+        background-color:$background-lite;
+    }
+}

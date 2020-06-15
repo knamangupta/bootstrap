@@ -9,9 +9,11 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+	<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+	
 	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/assignment4.css">
 	
 	<!-- Content --> 
     <title>Ristorante Con Fusion</title>
@@ -39,16 +41,15 @@
 				</ul>
 				
 				<span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
-                    <span class="fa fa-sign-in"></span> Login</a>
+                    <a id="login"><span class="fa fa-sign-in"></span> Login</a>
                 </span>
 				
 			</div>	
 		</div>	
 	</nav>
 	
-	<div id="loginModal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg" role="content">
+	<div id="loginmodal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="content">
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
@@ -86,7 +87,7 @@
     </div>
 	
 	<div id="reservemodal" class="modal fade" role="dialog">
-		<div class="modal-dialog modal-lg" role="content">
+		<div class="modal-dialog modal-dialog-centered modal-lg" role="content">
 			<div class="modal-content">
 				<div class="modal-header">
                     <h4 class="modal-title">Reserve a table </h4>
@@ -159,7 +160,7 @@
                 </div>
 				
 				<div class="col col-sm-3 align-self-center">
-                    <a  data-toggle="modal" data-target="#reservemodal" "type="button" class="btn btn-warning btn-block" data-toggle="tooltip" data-html="true" title="Or Call us at +852 12345678" data-placement="bottom"> <span> Reserve Table </span></a>
+                    <a type="button" id="reservation" class="btn btn-warning btn-block" data-toggle="tooltip" data-html="true" title="Or Call us at +852 12345678" data-placement="bottom"> <span> Reserve Table </span></a>
                 </div>
 				
             </div>
@@ -379,43 +380,10 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-	
-	<!--<script>
-		$(document).ready(function() {
-			$('[data-toggle="tooltip"]').tooltip();
-		})
-	</script>-->
-	
-<!--<script>
-        $(document).ready(function(){
-            $("#mycarousel").carousel( { interval: 500 } );
-            $("#carousel-pause").click(function(){
-                $("#mycarousel").carousel('pause');
-            });
-            $("#carousel-play").click(function(){
-                $("#mycarousel").carousel('cycle');
-            });
-        });
-    </script> -->
+	<script src="js/scripts.js"></script>
 
 	
-	<script>
-        $(document).ready(function(){
-            $("#mycarousel").carousel( { interval: 2000 } );
-            $("#carouselButton").click(function(){
-                if ($("#carouselButton").children("span").hasClass('fa-pause')) {
-                    $("#mycarousel").carousel('pause');
-                    $("#carouselButton").children("span").removeClass('fa-pause');
-                    $("#carouselButton").children("span").addClass('fa-play');
-                }
-                else if ($("#carouselButton").children("span").hasClass('fa-play')){
-                    $("#mycarousel").carousel('cycle');
-                    $("#carouselButton").children("span").removeClass('fa-play');
-                    $("#carouselButton").children("span").addClass('fa-pause');                    
-                }
-            });
-        });
-    </script>
+	
 	
 </body>
 
